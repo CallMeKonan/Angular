@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { SuperHero } from '../superhero-component/SuperHero'
 
 @Component({
   selector: 'app-superhero-form',
   templateUrl: './superhero-form.component.html',
   styleUrls: ['./superhero-form.component.css']
 })
-export class SuperheroFormComponent implements OnInit {
+export class SuperheroFormComponent {
 
-  constructor() { }
+  @Output() superheroCreated = new EventEmitter<SuperHero>();
 
-  ngOnInit(): void {
+  createSuperHero(nombre:string, pseudonimo:string, edad:number){
+    this.superheroCreated.emit(new SuperHero(nombre, pseudonimo, edad));
   }
 
 }
