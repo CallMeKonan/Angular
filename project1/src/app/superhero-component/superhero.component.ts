@@ -7,7 +7,8 @@ import { SuperHero } from './SuperHero';
   styleUrls: ['./superhero.component.css']
 })
 export class SuperheroComponent {
-  
-    @Input('SuperHero') hero: SuperHero;
+
+    @Input('hero')
+  hero!: SuperHero;
 
 }

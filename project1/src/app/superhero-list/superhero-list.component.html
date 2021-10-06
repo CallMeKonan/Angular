@@ -1,2 +1,2 @@
-<superhero-form (SuperHeroCreated)="addSuperHero($event)"></superhero-form>
-<SuperHero *ngFor="let hero of heroes" [hero]="h"></SuperHero>
+<superhero-form (superheroCreated)="addSuperHero($event)"></superhero-form>
+<SuperHero *ngFor="let hero of heroes" [hero]="hero"></SuperHero>
