@@ -1,1 +1,2 @@
-<p>superhero-list works!</p>
+<superhero-form (SuperHeroCreated)="addSuperHero($event)"></superhero-form>
+<SuperHero *ngFor="let hero of heroes" [hero]="h"></SuperHero>

@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SuperheroFormComponent } from './superhero-form.component';
 
-describe('SuperheroFormComponent', () => {
-  let component: SuperheroFormComponent;
-  let fixture: ComponentFixture<SuperheroFormComponent>;
+import { AppComponent } from './app.component';
+
+describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SuperheroFormComponent ]
+      declarations: [ AppComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SuperheroFormComponent);
+    fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
