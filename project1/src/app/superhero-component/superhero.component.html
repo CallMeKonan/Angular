@@ -1,9 +1,9 @@
 <div>
-    <div [hidden]="hero.invisibilidad">
+    <div>
         <h1>{{hero.pseudonimo}}</h1>
         <ul>
-            <li>Identidad: {{hero.nombre}}</li>
-            <li>Edad: {{hero.edad}}</li>
+            <li [hidden]="hero.invisibilidad">Identidad: {{hero.nombre}}</li>
+            <li [hidden]="hero.invisibilidad">Edad: {{hero.edad}}</li>
         </ul>
     </div>
     <button (click)="hero.cambiarVisibilidad()">Invisibilidad</button>
