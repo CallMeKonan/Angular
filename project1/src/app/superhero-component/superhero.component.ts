@@ -8,6 +8,6 @@ import { SuperHero } from './SuperHero';
 })
 export class SuperheroComponent {
 
-    @Input('hero') hero: SuperHero;
+    @Input('hero') hero!: SuperHero;
 
 }
