@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Botones3';
+
+  cadena:string;
+
+  constructor(){
+    this.cadena="";
+  }
+
+  detectaBtn(button:Element){
+    if(button.id=="btn1")
+      this.cadena="Pulsó el botón 1";
+    else if(button.id=="btn2")
+      this.cadena="Pulsó el botón 2";
+    else
+      this.cadena="Pulsó el botón 3";
+  }
+
 }
