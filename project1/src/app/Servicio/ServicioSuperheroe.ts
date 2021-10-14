@@ -21,7 +21,7 @@ export class ServicioSuperheroes{
     borrarHeroe(heroe:SuperHero) {
         for(let i=0;i<this.heroes.length;i++){
             if(this.heroes[i]==heroe)
-                this.heroes.splice(i);
+                this.heroes.splice(i, 1);
         }
     }
 }

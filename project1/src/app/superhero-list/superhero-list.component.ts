@@ -19,4 +19,8 @@ export class SuperheroListComponent {
       this.heroes.heroes.unshift(hero);
     }
 
+    borrarEntrada(heroeServicio:SuperHero){
+      this.heroes.borrarHeroe(heroeServicio);
+    }
+
 }
