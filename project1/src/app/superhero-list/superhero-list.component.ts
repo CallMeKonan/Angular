@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SuperHero } from '../superhero-component/SuperHero';
+import { ServicioSuperheroes } from '../Servicio/ServicioSuperheroe'
 
 @Component({
   selector: 'superhero-list',
@@ -8,19 +9,14 @@ import { SuperHero } from '../superhero-component/SuperHero';
 })
 export class SuperheroListComponent {
 
-  heroes: SuperHero[];
+  heroes: ServicioSuperheroes;
 
   constructor() {
-    this.heroes=[
-      new SuperHero("Jason Todd", "Red Hood", 19),
-      new SuperHero("Bruce Wayne", "Batman", 48),
-      new SuperHero("Ted Kord", "Blue Beetle", 25),
-      new SuperHero("Rachel Roth", "Raven", 21),
-      new SuperHero("Kory Anders", "Starfire", 36)
-    ]; }
+      this.heroes=new ServicioSuperheroes();
+   }
 
     addSuperHero(hero: SuperHero){
-      this.heroes.unshift(hero);
+      this.heroes.heroes.unshift(hero);
     }
 
 }
