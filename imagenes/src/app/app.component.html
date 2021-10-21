@@ -1,0 +1,4 @@
+<cabecera (imagen)="cambiaRutaActual($event)" (esconder)="cambiaVisibilidad($event)">
+  <img src="../assets/skull.gif" height="50px" width="50px">
+</cabecera>
+<img *ngIf="visible" [src]="rutaImagen">
