@@ -4,6 +4,7 @@ import { SuperheroComponent } from './superhero-component/superhero.component';
 import { SuperheroListComponent } from './superhero-list/superhero-list.component';
 import { SuperheroFormComponent } from './superhero-form/superhero-form.component';
 import { AppComponent } from './app.component';
+import { FiltroMalsonantePipe } from './Tuberias/filtro-malsonante.pipe';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
     SuperheroComponent,
     SuperheroListComponent,
     SuperheroFormComponent,
-    AppComponent
+    AppComponent,
+    FiltroMalsonantePipe
   ],
   imports: [
     BrowserModule

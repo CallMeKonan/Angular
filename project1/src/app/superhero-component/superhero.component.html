@@ -2,7 +2,7 @@
     <div>
         <h1>{{hero.pseudonimo}}</h1>
         <ul>
-            <li [hidden]="hero.invisibilidad">Identidad: {{hero.nombre}}</li>
+            <li [hidden]="hero.invisibilidad">Identidad: {{hero.nombre | filtroMalsonante:'Ted, Jason'}}</li>
             <li [hidden]="hero.invisibilidad">Edad: {{hero.edad}}</li>
         </ul>
     </div>
