@@ -1,0 +1,9 @@
+img{
+    width: 50%;
+}
+
+.imagen-cambiada{
+    border-style: solid;
+    border-width: 1;
+    border-color:green;
+}
