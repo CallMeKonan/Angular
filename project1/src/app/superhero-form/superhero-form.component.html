@@ -1,13 +1,11 @@
 <div>
     <h2>Introduce Superhéroe</h2>
-    <div>
-        <input type="text" placeholder="Nombre..." #nombre>
-    </div>
-    <div>
-        <input type="text" placeholder="Pseudonimo..." #pseudonimo>
-    </div>
-    <div>
-        <input type="text" placeholder="Edad..." #edad>
-    </div>
-    <button type="button" (click)="createSuperHero(nombre.value, pseudonimo.value, edad.value)">Crear</button>
+    <form [formGroup]="formulario">
+        <fieldset>
+            <input type="text" placeholder="Nombre..." #nombre required>
+            <input type="text" placeholder="Pseudonimo..." #pseudonimo required>
+            <input type="text" placeholder="Edad..." #edad required>
+            <button type="button" (click)="createSuperHero(nombre.value, pseudonimo.value, edad.value)">Crear</button>
+        </fieldset>
+    </form>
 </div>

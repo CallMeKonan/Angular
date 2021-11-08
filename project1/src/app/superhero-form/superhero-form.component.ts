@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { SuperHero } from '../superhero-component/SuperHero'
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'superhero-form',
@@ -8,7 +10,16 @@ import { SuperHero } from '../superhero-component/SuperHero'
 })
 export class SuperheroFormComponent {
 
+  formulario:FormGroup;
   @Output() superheroCreated = new EventEmitter<SuperHero>();
+
+  constructor(){
+    this.formulario= new FormGroup({
+       nombre: new FormControl("", [Validators.required, Validators.minLength(6)]),
+       pseudonimo: new FormControl("", [Validators.required, Validators.minLength(6)]),
+       edad: new FormControl("", [Validators.required, Validators.minLength(6)])
+    });
+  }
 
   createSuperHero(nombre:string, pseudonimo:string, edad:string){
     this.superheroCreated.emit(new SuperHero(nombre, pseudonimo, Number.parseInt(edad)));
