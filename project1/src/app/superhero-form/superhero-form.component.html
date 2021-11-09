@@ -2,10 +2,21 @@
     <h2>Introduce Superhéroe</h2>
     <form [formGroup]="formulario">
         <fieldset>
-            <input type="text" placeholder="Nombre..." #nombre required>
-            <input type="text" placeholder="Pseudonimo..." #pseudonimo required>
-            <input type="text" placeholder="Edad..." #edad required>
+
+            <input type="text" placeholder="Nombre..." formControlName="nombre" #nombre [ngClass]="{'not-valid': formulario.controls.nombre.invalid && formulario.controls.nombre.dirty}"><br>
+            <div class="danger-text" *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.dirty">Required</div>
+            <div class="danger-text" *ngIf="formulario.controls.nombre.errors?.minlength && formulario.controls.nombre.dirty">6 chars. min.</div>
+
+            <input type="text" placeholder="Pseudonimo..." formControlName="pseudonimo" #pseudonimo [ngClass]="{'not-valid': formulario.controls.pseudonimo.invalid && formulario.controls.pseudonimo.dirty}"><br>
+            <div class="danger-text" *ngIf="formulario.controls.pseudonimo.invalid && formulario.controls.pseudonimo.dirty">Required</div>
+            <div class="danger-text" *ngIf="formulario.controls.pseudonimo.errors?.minlength && formulario.controls.pseudonimo.dirty">6 chars. min.</div>
+
+            <input type="text" placeholder="Edad..." formControlName="edad" #edad [ngClass]="{'not-valid': formulario.controls.edad.invalid && formulario.controls.edad.dirty}"><br>
+            <div class="danger-text" *ngIf="formulario.controls.edad.invalid && formulario.controls.edad.dirty">Required</div>
+            <div class="danger-text" *ngIf="formulario.controls.edad.errors?.pattern && formulario.controls.edad.dirty">Numbers only</div>
+
             <button type="button" (click)="createSuperHero(nombre.value, pseudonimo.value, edad.value)">Crear</button>
+
         </fieldset>
     </form>
 </div>

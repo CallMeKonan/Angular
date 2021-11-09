@@ -5,6 +5,7 @@ import { SuperheroListComponent } from './superhero-list/superhero-list.componen
 import { SuperheroFormComponent } from './superhero-form/superhero-form.component';
 import { AppComponent } from './app.component';
 import { FiltroMalsonantePipe } from './Tuberias/filtro-malsonante.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FiltroMalsonantePipe } from './Tuberias/filtro-malsonante.pipe';
     FiltroMalsonantePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
