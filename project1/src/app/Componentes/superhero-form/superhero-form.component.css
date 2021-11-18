@@ -1,0 +1,10 @@
+.not-valid{
+    border-color: crimson;
+    border-style: solid;
+}
+
+.danger-text{
+    color: crimson;
+    font-size: 8px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
