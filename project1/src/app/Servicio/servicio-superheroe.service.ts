@@ -19,7 +19,7 @@ export class ServicioSuperheroeService {
       new SuperHero("Ted Kord", "Blue Beetle", 25),
       new SuperHero("Rachel Roth", "Raven", 21),
       new SuperHero("Kory Anders", "Starfire", 36)
-    ];  
+    ];
   }
 
   devuelveHeroes() : Observable<SuperHero[]> {
