@@ -1,0 +1,41 @@
+.navbar{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: paleturquoise;
+}
+
+header::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.nav-links{
+    float: right;
+}
+
+.nav-ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links-entry{
+    display: inline-flex;
+    margin-left: 70px;
+    padding-top: 20px;
+}
+
+.nav-icon{
+    float: left;
+    width: 2em;
+    height: 2em;
+    text-shadow:
+        0, 0, 0.125em, white
+        0, 0, 0.25em, #4169E1
+    ;
+}

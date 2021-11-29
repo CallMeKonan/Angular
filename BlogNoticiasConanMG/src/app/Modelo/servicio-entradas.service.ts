@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Entrada } from './entrada';
 
 @Injectable({
@@ -18,6 +18,10 @@ export class ServicioEntradasService {
       new Entrada('','',new Date().toLocaleDateString())
     )
     this._suscr=new BehaviorSubject(this._entradasEscritas);
+  }
+
+  public desvuelveEntradas() : Observable<Entrada[]>{
+    return this._suscr.asObservable();
   }
 
   public addEntrada(nuevaEntrada:Entrada){
