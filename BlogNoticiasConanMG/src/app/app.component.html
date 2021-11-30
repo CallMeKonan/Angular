@@ -4,10 +4,12 @@
     <nav class="nav-links">
       <ul class="nav-ul">
         <li>
-          <a href="" class="nav-links-entry">Login</a>
-          <a href="" class="nav-links-entry">Blog</a>
+          Modo Oscuro:<input type="checkbox">
+          <a routerLink="/loginForm" class="nav-links-entry">Login</a>
+          <a routerLink="/entradas" class="nav-links-entry">Blog</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+<router-outlet class="comp"></router-outlet>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormLoginComponent } from './src/form-login/form-login.component';
 import { FormEntradasComponent } from './src/form-entradas/form-entradas.component';
 import { ListEntradasComponent } from './src/list-entradas/list-entradas.component';
+import { EntradasComponent } from './src/entradas/entradas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormLoginComponent,
     FormEntradasComponent,
-    ListEntradasComponent
+    ListEntradasComponent,
+    EntradasComponent
   ],
   imports: [
     BrowserModule,
