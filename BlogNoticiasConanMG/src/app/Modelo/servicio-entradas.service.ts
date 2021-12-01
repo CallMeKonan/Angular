@@ -12,15 +12,15 @@ export class ServicioEntradasService {
 
   constructor() {
     this._entradasEscritas=new Array<Entrada>(
-      new Entrada('','',new Date().toLocaleDateString()),
-      new Entrada('','',new Date().toLocaleDateString()),
-      new Entrada('','',new Date().toLocaleDateString()),
-      new Entrada('','',new Date().toLocaleDateString())
+      new Entrada('Hola','adasfasdfafdf', '01/09/2021'),
+      new Entrada('wefefwe','wefwefwefwef', '01/10/2021'),
+      new Entrada('sdfsdfafd','retrefdsgdsg', '01/11/2021'),
+      new Entrada('ergrthfghdh','rtyrhgfdhtrh', '01/12/2021')
     )
     this._suscr=new BehaviorSubject(this._entradasEscritas);
   }
 
-  public desvuelveEntradas() : Observable<Entrada[]>{
+  public devuelveEntradas() : Observable<Entrada[]>{
     return this._suscr.asObservable();
   }
 
@@ -34,9 +34,9 @@ export class ServicioEntradasService {
     this._suscr.next([...this._entradasEscritas]);
   }
 
-  public modEntrada(id:number, titulo:string, contenido:string){
+  public modEntrada(id:number, titulo:string, contenido:string, fechaPubl:string){
     let indiceCambiar=this._entradasEscritas.findIndex(entrada => entrada.id===id);
-    this._entradasEscritas[indiceCambiar]=new Entrada(titulo, contenido, new Date().toLocaleDateString());
+    this._entradasEscritas[indiceCambiar]=new Entrada(titulo, contenido, fechaPubl);
     this._suscr.next([...this._entradasEscritas]);
   }
 }

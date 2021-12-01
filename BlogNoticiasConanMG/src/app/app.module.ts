@@ -7,6 +7,7 @@ import { FormLoginComponent } from './src/form-login/form-login.component';
 import { FormEntradasComponent } from './src/form-entradas/form-entradas.component';
 import { ListEntradasComponent } from './src/list-entradas/list-entradas.component';
 import { EntradasComponent } from './src/entradas/entradas.component';
+import { ServicioEntradasService } from './Modelo/servicio-entradas.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { EntradasComponent } from './src/entradas/entradas.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ServicioEntradasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
