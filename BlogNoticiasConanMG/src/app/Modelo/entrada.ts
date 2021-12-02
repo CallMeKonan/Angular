@@ -3,10 +3,10 @@ export class Entrada {
     private static contadorEntrada:number=1;
     private _id:number;
     private _titulo:string;
-    private _contenido:string;
-    private _fechaPubl:string;
+    private _contenido:String;
+    private _fechaPubl:String;
   
-    constructor(titulo:string, contenido:string, fechaPubl:string){
+    constructor(titulo:string, contenido:String, fechaPubl:String){
         this._id=Entrada.contadorEntrada;
         this._titulo=titulo;
         this._contenido=contenido;
@@ -30,7 +30,7 @@ export class Entrada {
         return this._contenido;
     }
     
-    set contenido(contenido:string){
+    set contenido(contenido:String){
         this._contenido=contenido;
     }
 
@@ -38,7 +38,7 @@ export class Entrada {
         return this._fechaPubl;
     }
 
-    set fechaPubl(fechaPubl:string){
+    set fechaPubl(fechaPubl:String){
         this._fechaPubl=fechaPubl;
     }
 

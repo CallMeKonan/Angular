@@ -1,8 +1,12 @@
-<form>
+<form [formGroup]="formularioLogin">
     <fieldset>
         Usuario: <br>
-        <input type="text" placeholder="User..."><br>
+        <input type="text" placeholder="User..." #usuario formControlName="usuario"><br>
+        <div *ngIf="formularioLogin.controls.usuario.errors?.required && formularioLogin.controls.usuario.dirty">*Required</div>
         Contraseña: <br>
-        <input type="text" placeholder="Password...">
+        <input type="text" placeholder="Password..." #psswd formControlName="psswd">
+        <div *ngIf="formularioLogin.controls.psswd.errors?.required && formularioLogin.controls.psswd.dirty">*Required</div>
+        <div *ngIf="formularioLogin.controls.psswd.errors?.minlength && formularioLogin.controls.psswd.dirty">*Min. 8 char</div><br>
+        <button (click)="accesoPermitido(usuario.value, psswd.value)">Acceder</button>
     </fieldset>
 </form>

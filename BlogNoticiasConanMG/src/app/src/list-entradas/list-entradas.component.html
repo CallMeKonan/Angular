@@ -2,8 +2,8 @@
     <img class="icon" src="../../../assets/newspaper.png">
     <ul>
         <li>
-            Titulo:<br>
-            {{muestraEntrada.titulo}}
+            Título:<br>
+            {{muestraEntrada.titulo | uppercase}}
         </li>
         <li>
             Fecha Publicación: {{muestraEntrada.fechaPubl}}
@@ -13,4 +13,5 @@
             {{muestraEntrada.contenido}}
         </li>
     </ul>
+    <button (click)="borraEntrada(muestraEntrada.id)">Eliminar</button>
 </div>

@@ -18,6 +18,10 @@ export class ListEntradasComponent {
     this.suscripcion=servicioEntradas.devuelveEntradas().subscribe( entradas => this._arrayEntradas=entradas);
   }
 
+  public borraEntrada(id:number){
+    this.servicioEntradas.removeEntrada(id);
+  }
+
   get arrayEntradas(){
     return this._arrayEntradas
   }

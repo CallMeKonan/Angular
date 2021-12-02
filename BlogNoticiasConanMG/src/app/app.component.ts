@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { ServicioAuthService } from './Modelo/servicio-auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BlogNoticiasConanMG';
+
+  @Output() oscuro!: EventEmitter<Boolean>;
+
+  public cambiarTema(){
+    this.oscuro.emit(!this.oscuro);
+  }
+
 }
