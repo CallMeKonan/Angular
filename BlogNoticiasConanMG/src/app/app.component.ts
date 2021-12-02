@@ -9,10 +9,16 @@ import { ServicioAuthService } from './Modelo/servicio-auth.service';
 export class AppComponent {
   title = 'BlogNoticiasConanMG';
 
+  private temaOscuro:Boolean;
   @Output() oscuro!: EventEmitter<Boolean>;
 
+  constructor(){
+    this.temaOscuro=false;
+  }
+
   public cambiarTema(){
-    this.oscuro.emit(!this.oscuro);
+    this.temaOscuro=!this.temaOscuro;
+    this.oscuro.emit(this.temaOscuro);
   }
 
 }

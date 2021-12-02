@@ -4,7 +4,7 @@
     <nav class="nav-links">
       <ul class="nav-ul">
         <li>
-          Modo Oscuro:<input type="checkbox" (click)="cambiarTema()">
+          Modo Oscuro:<input type="checkbox" (ngModelChange)="cambiarTema()">
           <a routerLink="/loginForm" routerLinkActive="active" class="nav-links-entry">Login</a>
           <a routerLink="/entradas" class="nav-links-entry">Blog</a>
         </li>
