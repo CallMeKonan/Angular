@@ -1,3 +1,32 @@
-*{
-    clear: both;
+form{
+    text-align: center;
+}
+
+#title{
+    text-align: center;
+    font-family: 'Gill Sans MT';
+}
+
+#error{
+    color: red;
+    font-size: 10px;
+}
+
+.field-text{
+    font-family: 'Gill Sans MT';
+    font-weight: bold;    
+}
+
+.form-textbox{
+    height: 3em;
+    width: 16em;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.form-textbox:focus{
+    outline: none;
 }

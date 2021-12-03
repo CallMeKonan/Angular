@@ -1,15 +1,21 @@
-<header>
+<header [ngClass]="{'dark-mode': temaOscuro, 'light-mode-header': !temaOscuro }">
   <div class="navbar">
-    <img src="../assets/newspaper.png" class="nav-icon">
     <nav class="nav-links">
       <ul class="nav-ul">
-        <li>
-          Modo Oscuro:<input type="checkbox" (ngModelChange)="cambiarTema()">
+        <li class="nav-li">
+          <img src="../assets/newspaper.png" class="nav-logo">
+        </li>
+        <li class="nav-li">
           <a routerLink="/loginForm" routerLinkActive="active" class="nav-links-entry">Login</a>
+        </li>
+        <li class="nav-li">
           <a routerLink="/entradas" class="nav-links-entry">Blog</a>
+        </li>
+        <li class="nav-li">
+          <img src={{rutaImagen}} class="nav-icon" (click)="cambiarTema()">
         </li>
       </ul>
     </nav>
   </div>
 </header>
-<router-outlet class="comp"></router-outlet>
+<router-outlet></router-outlet>

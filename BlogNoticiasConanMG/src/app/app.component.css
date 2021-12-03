@@ -1,3 +1,9 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
 .navbar{
     width: 100%;
 }
@@ -6,11 +12,34 @@ header{
     width: 100%;
     margin: 0;
     padding: 0;
+    height: 2.95em;
+}
+
+header::after{
     clear: both;
 }
 
-.nav-links{
-    float: right;
+.light-mode-header{
+    background-color:lightskyblue;
+}
+
+.nav-li{
+    float: left;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+.nav-li a{
+    color: currentColor;
+    text-decoration: none;
+    display: inline-block;
+    display: block;
+    padding: 14px 16px;
+}
+
+.nav-li a:hover{
+    background-color: black;
+    color:white
 }
 
 .nav-ul{
@@ -19,15 +48,23 @@ header{
     padding: 0;
 }
 
-.nav-links-entry{
-    display: inline-flex;
-    margin-left: 5em;
-    margin-right: 5em;
-    margin-top: 2em;
+.nav-li:last-child{
+    float: right;
+}
+
+.nav-logo{
+    margin-top: 0.35em;    
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 .nav-icon{
-    float: left;
+    float:right;
     width: 2em;
     height: 2em;
+    margin-top: 0.5em;
+    margin-right: 2em;
+    margin-left: 2em;
 }

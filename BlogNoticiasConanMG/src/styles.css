@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'animate.css';
+
+.input-text{
+    --input-height:3em;
+    --input-width:16em;
+}
+
+*{
+    margin: 0;
+}
+
+.dark-mode{
+    background-color:rgb(32, 32, 32);
+    color: seashell;
+}

@@ -1,12 +1,13 @@
 <form [formGroup]="formularioLogin">
-    <fieldset>
+    <h1 class="animate__animated animate__heartBeat animate__infinite" id="title">WELCOME AGAIN!</h1>
+    <fieldset class="field-text">
         Usuario: <br>
-        <input type="text" placeholder="User..." #usuario formControlName="usuario"><br>
-        <div *ngIf="formularioLogin.controls.usuario.errors?.required && formularioLogin.controls.usuario.dirty">*Required</div>
+        <input class="form-textbox" type="text" placeholder="User..." #usuario formControlName="usuario"><br>
+        <div class="animate__animated animate__flash" id="error" *ngIf="formularioLogin.controls.usuario.errors?.required && formularioLogin.controls.usuario.dirty || acceder">*Required</div><br>
         Contraseña: <br>
-        <input type="text" placeholder="Password..." #psswd formControlName="psswd">
-        <div *ngIf="formularioLogin.controls.psswd.errors?.required && formularioLogin.controls.psswd.dirty">*Required</div>
-        <div *ngIf="formularioLogin.controls.psswd.errors?.minlength && formularioLogin.controls.psswd.dirty">*Min. 8 char</div><br>
+        <input class="form-textbox" type="text" placeholder="Password..." #psswd formControlName="psswd">
+        <div class="animate__animated animate__flash" id="error" *ngIf="acceder || formularioLogin.controls.psswd.errors?.required && formularioLogin.controls.psswd.dirty">*Required</div>
+        <div class="animate__animated animate__flash" id="error" *ngIf="formularioLogin.controls.psswd.errors?.minlength && formularioLogin.controls.psswd.dirty">*Min. 8 char</div><br><br>
         <button (click)="accesoPermitido(usuario.value, psswd.value)">Acceder</button>
     </fieldset>
 </form>

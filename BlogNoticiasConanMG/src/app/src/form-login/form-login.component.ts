@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { Entrada } from 'src/app/Modelo/entrada';
 import { ServicioAuthService } from 'src/app/Modelo/servicio-auth.service';
-import { ServicioEntradasService } from 'src/app/Modelo/servicio-entradas.service';
 
 @Component({
   selector: 'app-form-login',
@@ -14,8 +11,10 @@ import { ServicioEntradasService } from 'src/app/Modelo/servicio-entradas.servic
 export class FormLoginComponent {
 
   formularioLogin:FormGroup;
+  private _acceder:Boolean;
 
   constructor(public _servicioAuth:ServicioAuthService, private _router:Router) {
+    this._acceder=false;
     this.formularioLogin=new FormGroup({
       usuario:new FormControl("",
       [
@@ -29,7 +28,12 @@ export class FormLoginComponent {
     })
   }
 
+  get acceder(){
+    return this._acceder;
+  }
+
   public accesoPermitido(usuario:String, psswd:String){
+    this._acceder=true;
     if(usuario.length>0 && psswd.length>8){
       this._servicioAuth.actualizaAuth();
       this._router.navigate(['/entradas']);

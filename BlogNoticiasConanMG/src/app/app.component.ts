@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServicioAuthService } from './Modelo/servicio-auth.service';
 
 @Component({
@@ -9,16 +9,29 @@ import { ServicioAuthService } from './Modelo/servicio-auth.service';
 export class AppComponent {
   title = 'BlogNoticiasConanMG';
 
-  private temaOscuro:Boolean;
-  @Output() oscuro!: EventEmitter<Boolean>;
+  private _rutaImagen:String;
+  private _temaOscuro:Boolean;
 
-  constructor(){
-    this.temaOscuro=false;
+  constructor() {
+    this._rutaImagen="../assets/light.png"
+    this._temaOscuro=false;
   }
 
   public cambiarTema(){
-    this.temaOscuro=!this.temaOscuro;
-    this.oscuro.emit(this.temaOscuro);
+    if(this._rutaImagen==="../assets/light.png")
+    this._rutaImagen="../assets/dark.png"
+    else{
+      this._rutaImagen="../assets/light.png"
+    }
+    this._temaOscuro=!this._temaOscuro;
+  }
+
+  get rutaImagen(){
+    return this._rutaImagen;
+  }
+
+  get temaOscuro(){
+    return this._temaOscuro;
   }
 
 }
