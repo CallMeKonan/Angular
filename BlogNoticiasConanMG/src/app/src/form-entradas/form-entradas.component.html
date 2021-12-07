@@ -2,12 +2,12 @@
     <fieldset>
         Título: <br>
         <input type="text" formControlName="titulo" #titulo placeholder="Piensa un título"><br>
-        <div *ngIf="formularioEntradas.controls.titulo.errors?.required && formularioEntradas.controls.titulo.dirty">*Required</div>
-        <div *ngIf="formularioEntradas.controls.titulo.errors?.minlength && formularioEntradas.controls.titulo.dirty">*Min. 10 char</div>
+        <div id="error" class="animate__animated animate__flash" *ngIf="formularioEntradas.controls.titulo.errors?.required && formularioEntradas.controls.titulo.dirty">*Required</div>
+        <div id="error" class="animate__animated animate__flash" *ngIf="formularioEntradas.controls.titulo.errors?.minlength && formularioEntradas.controls.titulo.dirty">*Min. 10 char</div>
         Contenido: <br>
         <textarea formControlName="contenido" #contenido placeholder="¡Comparte tus pensamientos! ^^"></textarea>
-        <div *ngIf="formularioEntradas.controls.contenido.errors?.required && formularioEntradas.controls.contenido.dirty">*Required</div>
-        <div *ngIf="formularioEntradas.controls.contenido.errors?.maxlength && formularioEntradas.controls.contenido.dirty">*Max. 300 char</div>
+        <div id="error" class="animate__animated animate__flash" *ngIf="formularioEntradas.controls.contenido.errors?.required && formularioEntradas.controls.contenido.dirty">*Required</div>
+        <div id="error" class="animate__animated animate__flash" *ngIf="formularioEntradas.controls.contenido.errors?.maxlength && formularioEntradas.controls.contenido.dirty">*Max. 300 char</div>
         <br>
         <button (click)="addEntrada(titulo.value, contenido.value)">Post</button>
     </fieldset>

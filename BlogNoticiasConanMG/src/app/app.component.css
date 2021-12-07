@@ -38,8 +38,7 @@ header::after{
 }
 
 .nav-li a:hover{
-    background-color: black;
-    color:white
+    backdrop-filter: brightness(85%);   
 }
 
 .nav-ul{

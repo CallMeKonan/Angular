@@ -7,11 +7,6 @@ form{
     font-family: 'Gill Sans MT';
 }
 
-#error{
-    color: red;
-    font-size: 10px;
-}
-
 .field-text{
     font-family: 'Gill Sans MT';
     font-weight: bold;    
