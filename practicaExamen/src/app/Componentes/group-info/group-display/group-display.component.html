@@ -1,0 +1,8 @@
+<div class="player-card" *ngFor="let player of players">
+    <ul>
+        <li>Jugador {{player.id}}: {{player.name | swearWordPipe:'UWU' }}</li>
+        <li>Edad: {{player.age}}</li>
+    </ul>
+    <button (click)="delPlayer(player.id)">Eliminar</button>
+</div>
+<button (click)="changeDivColor()">Cambiar Div</button>

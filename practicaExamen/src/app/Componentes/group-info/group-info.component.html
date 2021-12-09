@@ -1,0 +1,6 @@
+<div [ngClass]="{'dark-mode':darkTheme, 'light.mode':!darkTheme}">
+    Hola
+    <button (click)="showForm()">Añadir Jugadores</button>
+</div>
+<group-form *ngIf="seeForm"></group-form>
+<group-display  (export)="getValue($event)"></group-display>

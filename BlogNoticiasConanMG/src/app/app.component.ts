@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServicioAuthService } from './Modelo/servicio-auth.service';
+import { ServicioOscuroService } from './Modelo/servicio-oscuro.service';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,10 @@ export class AppComponent {
   private _rutaImagen:String;
   private _temaOscuro:Boolean;
 
-  constructor() {
+  constructor(public servicioOscuro:ServicioOscuroService) {
     this._rutaImagen="../assets/light.png"
     this._temaOscuro=false;
+    servicioOscuro.devuelveTema().subscribe( oscuro => this._temaOscuro=oscuro )
   }
 
   public cambiarTema(){
@@ -23,7 +24,7 @@ export class AppComponent {
     else{
       this._rutaImagen="../assets/light.png"
     }
-    this._temaOscuro=!this._temaOscuro;
+    this.servicioOscuro.cambiaTema()
   }
 
   get rutaImagen(){

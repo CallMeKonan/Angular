@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+    Nombre:<br>
+    <input formControlName="name" #name type="text">
+    <div class="error" *ngIf="form.controls.name.errors?.required && form.controls.name.dirty">*Required!</div>
+    <div class="error" *ngIf="form.controls.name.errors?.maxlength && form.controls.name.dirty">*Max. Length 50</div>
+    <br>Edad:<br>
+    <input formControlName="age" #age type="text">
+    <div class="error" *ngIf="form.controls.age.errors?.required && form.controls.age.dirty">*Required!</div>
+    <div class="error" *ngIf="form.controls.age.errors?.pattern && form.controls.age.dirty">*Numbers Only!</div>
+    <br><button (click)="addPlayer(name.value, age.value)">Insertar</button>
+</form>

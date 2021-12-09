@@ -1,0 +1,28 @@
+nav{
+    background-color:rgb(43, 43, 43);
+}
+
+.lit-button{
+    backdrop-filter: brightness(75%);
+}
+
+ul{
+    display: inline;
+    list-style: none;
+}
+
+img{
+    padding:0;
+}
+
+li{
+    padding: 1.5em;
+    display: inline-block;
+}
+
+a{
+    font-family: 'Gill Sans MT';
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+}

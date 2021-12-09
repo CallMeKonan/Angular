@@ -1,0 +1,112 @@
+*{
+    clear: both;
+}
+
+button{
+    border-radius: 10%;
+    border-width: 1px;
+    border-color: currentColor;
+    background-color: transparent;
+    color: currentColor;
+}
+
+#container{
+    min-height: 25vh;
+    height: max-content;
+    font-family: 'Gill Sans MT';
+    padding: 2em;
+}
+
+div[class*=box] {
+    height: 33.33%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+.btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative; 
+  }
+  .btn-two span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+  }
+  .btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
+
+.cuerpo{
+    margin: 2em;
+}
+
+.fecha{
+    font-size: 10px;
+}
+
+ul{
+    border-color: currentColor;
+    border-style: solid;
+    border-radius: 25%;
+    border-width: 1px;
+    margin-left: 5em;
+    padding: 2em;
+    width: 25%;
+}
+
+div{
+    text-align: justify;
+}
+
+li{
+    font-family: 'Gill Sans MT';
+    color: currentcolor;
+    list-style: none;
+}
+
+.icon{
+    width: 2em;
+    height: 2em;
+}

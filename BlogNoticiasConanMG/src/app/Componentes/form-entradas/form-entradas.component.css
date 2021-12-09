@@ -1,0 +1,22 @@
+*{
+    list-style: none;
+}
+
+#container{
+    padding: 2em;
+    min-height: 25vh;
+    height: max-content;
+    font-family: 'Gill Sans MT';
+}
+
+.form-textArea{
+    color: currentcolor;
+    background-color: transparent;
+    font-family: 'Gill Sans MT';
+}
+
+.entry-box{
+    padding-top: 2em;
+    min-width: 5vh;
+    width: max-content;
+}

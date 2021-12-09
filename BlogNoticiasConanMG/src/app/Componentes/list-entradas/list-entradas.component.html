@@ -1,0 +1,21 @@
+<div *ngFor="let muestraEntrada of arrayEntradas" [ngClass]="{'dark-mode': temaOscuro, 'light-mode': !temaOscuro }" id="container">
+    <ul>
+        <li>
+            <img class="icon" src="../../../assets/newspaper.png">
+            <h2>{{muestraEntrada.titulo | uppercase}}</h2>
+        </li>
+        <li class="fecha">
+            Publicado: {{muestraEntrada.fechaPubl}}
+        </li>
+        <li class="cuerpo">
+            {{muestraEntrada.contenido}}
+        </li>
+        <li class="btn-eliminar">
+            <div class="box-2">
+              <div class="btn btn-two">
+                <span (click)="borraEntrada(muestraEntrada.id)">ELIMINAR</span>
+              </div>
+            </div>
+        </li>
+    </ul>
+</div>

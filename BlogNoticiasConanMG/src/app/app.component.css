@@ -19,10 +19,6 @@ header::after{
     clear: both;
 }
 
-.light-mode-header{
-    background-color:lightskyblue;
-}
-
 .nav-li{
     float: left;
     font-family: Verdana;
@@ -38,7 +34,7 @@ header::after{
 }
 
 .nav-li a:hover{
-    backdrop-filter: brightness(85%);   
+    backdrop-filter: brightness(75%);   
 }
 
 .nav-ul{
